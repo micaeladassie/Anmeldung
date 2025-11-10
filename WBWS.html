@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geschutztseite</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        margin-top: 15vh;
+      }
+      input, button {
+        padding: 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        margin-top: 8px;
+      }
+      #content {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Bitte Password hier einfügen</h2>
+    <input type="password" id="pw" placeholder="Password">
+    <button onclick="checkPassword()">Hier anmelden</button>
+
+    <div id="content">
+      <h3>✅ Bestätigung ist richtig erfolgreich!</h3>
+      <p>Qui puoi inserire link o messaggi per gli utenti autorizzati.</p>
+      <!-- Esempio: <a href="https://tuo-link.com/app">Experience App hier öffnen</a> -->
+    </div>
+
+    <script>
+      function checkPassword() {
+        const pw = document.getElementById("pw").value;
+        const correct = "chiave123"; // cambia qui la password
+        if (pw === correct) {
+          document.getElementById("content").style.display = "block";
+        } else {
+          alert("Password ");
+        }
+      }
+    </script>
+  </body>
+</html>
